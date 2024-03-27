@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>React Fragment and JSX</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        function App() {
+            return <div>
+                <p>React is a JavaScript library</p>
+                <div className="main" style={{ border: '1px solid black', padding: '10px', borderRadius: '5px' }}>
+                    <p>Click the below button to alert 'Hello'</p>
+                    <button onClick={() => alert('Alert Hello')}>Alert Hello</button>
+                </div>
+            </div>   
+        
+        };
+
+                root.render(<App/>);
+
+
+    </script>
+</body>
+
+</html>
